@@ -7,25 +7,26 @@ export default class RateCalculator extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // Not sure what to put here
+            dailyRate: 0,
+            hoursWorked: 0,
 
         };
     }
 
-    dayRate(){
+    setDailyRate(dailyRate){
         this.setState({
-            // Not sure what to put here
+            dailyRate
         });
     }
 
-    hoursWorked(){
+    hoursWorked(hoursWorked){
         this.setState({
-            // Not sure what to put here
-        })
+            hoursWorked
+        });
     }
 
     render() {
-        const rate = 10;
+        const rate = this.state.dailyRate / this.state.hoursWorked;
         return (
             <form>
                 <NumberInput id="day-rate" label="Day rate" min={0} max={5000} />
