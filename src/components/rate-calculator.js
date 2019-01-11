@@ -6,6 +6,22 @@ import Output from './output';
 export default class RateCalculator extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            // Not sure what to put here
+
+        };
+    }
+
+    dayRate(){
+        this.setState({
+            // Not sure what to put here
+        });
+    }
+
+    hoursWorked(){
+        this.setState({
+            // Not sure what to put here
+        })
     }
 
     render() {
@@ -20,4 +36,3 @@ export default class RateCalculator extends React.Component {
         );
     }
 }
-
